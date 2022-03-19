@@ -11,6 +11,10 @@ python setup.py sdist bdist_wheel
 
 from setuptools import setup
 from pafy import __version__
+from pip.req import parse_requirements
+
+install_reqs = parse_requirements(<requirements_path>)
+reqs = [str(ir.req) for ir in install_reqs]
 
 setup(
     name='pafy',
@@ -26,6 +30,7 @@ setup(
     extras_require={
         'youtube-dl-backend': ["youtube-dl"],
         },
+    install_requires=reqs,
     package_data={"": ["LICENSE", "README.rst", "CHANGELOG", "AUTHORS"]},
     include_package_data=True,
     license='LGPLv3',
