@@ -31,7 +31,7 @@ setup(
     url="https://github.com/mps-youtube/pafy/",
     download_url="https://github.com/mps-youtube/pafy/tags",
     extras_require={
-        'youtube-dl-backend': ["youtube-dl"],
+        'youtube-dl-backend': ["youtube-dl==2021.12.17"],
         },
     install_requires=reqs,
     package_data={"": ["LICENSE", "README.rst", "CHANGELOG", "AUTHORS"]},
