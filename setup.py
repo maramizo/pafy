@@ -17,7 +17,7 @@ def parse_requirements(filename):
     lineiter = (line.strip() for line in open(filename))
     return [line for line in lineiter if line and not line.startswith("#")]
 
-install_reqs = parse_requirements('requirements.txt')
+reqs = parse_requirements('requirements.txt')
 
 setup(
     name='pafy',
